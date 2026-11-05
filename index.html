@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV, Divya Gate · Software Developer</title>
+<meta name="description" content="Curriculum vitae of Divya Gate, software developer in Montréal: experience, skills, education and contact.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #fdfcfa;
+    --ink: #1c2530;
+    --muted: #5a6572;
+    --rule: #d9d6cf;
+    --accent: #0d5c63;
+    --on-accent: #ffffff;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #151a20;
+      --ink: #e8e6e1;
+      --muted: #9aa4af;
+      --rule: #2e3641;
+      --accent: #6cc3c9;
+      --on-accent: #10171c;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1rem/1.6 var(--sans); }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .wrap { max-width: 52rem; margin: 0 auto; padding: 0 1.5rem; }
+
+  /* top bar */
+  .topbar { position: sticky; top: 0; z-index: 5; background: var(--paper); border-bottom: 1px solid var(--rule); }
+  .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 3.5rem; flex-wrap: wrap; }
+  .brand { font: 600 1.1rem var(--serif); color: var(--ink); text-decoration: none; }
+  nav { display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: .95rem; }
+  nav a { color: var(--muted); text-decoration: none; }
+  nav a:hover { color: var(--accent); }
+
+  /* hero */
+  .hero { padding: 4rem 0 3rem; }
+  .kicker { color: var(--accent); font-weight: 500; margin: 0 0 .75rem; }
+  h1 { font: 600 clamp(2.6rem, 8vw, 4rem)/1.05 var(--serif); letter-spacing: -0.02em; margin: 0 0 1rem; }
+  .tagline { max-width: 40rem; font-size: 1.1rem; margin: 0 0 1.75rem; }
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+  .btn { display: inline-block; padding: .6rem 1.1rem; border: 1px solid var(--accent); border-radius: 6px; font: 500 .95rem var(--sans); text-decoration: none; cursor: pointer; }
+  .btn.primary { background: var(--accent); color: var(--on-accent); }
+  .btn.secondary { background: transparent; color: var(--accent); }
+
+  .print-contact { display: none; }
+
+  /* sections */
+  section { padding: 2.25rem 0 2.5rem; border-top: 1px solid var(--rule); }
+  h2 { font: 600 1.6rem/1.2 var(--serif); margin: 0 0 1.5rem; }
+  .row { display: grid; grid-template-columns: 9.5rem 1fr; gap: 0 2rem; margin-bottom: 1.5rem; }
+  .row:last-child { margin-bottom: 0; }
+  .when { color: var(--muted); font-size: .95rem; font-variant-numeric: tabular-nums; padding-top: .1rem; }
+  .row h3 { font: 600 1.05rem/1.4 var(--sans); margin: 0; }
+  .where { color: var(--muted); margin: 0 0 .4rem; font-size: .95rem; }
+  .row p { margin: 0 0 .4rem; }
+  ul.points { margin: .4rem 0 0; padding-left: 1.1rem; }
+  ul.points li { margin-bottom: .35rem; }
+  .label { font-weight: 600; }
+
+  /* footer */
+  footer { border-top: 1px solid var(--rule); padding: 1.75rem 0 3rem; color: var(--muted); font-size: .92rem; }
+  footer p { margin: 0 0 .25rem; }
+
+  @media (max-width: 40rem) {
+    .wrap { padding: 0 1.25rem; }
+    .hero { padding: 2.5rem 0 2rem; }
+    .row { grid-template-columns: 1fr; gap: .15rem; }
+  }
+
+  @media print {
+    @page { size: Letter; margin: 14mm 16mm; }
+    :root { --paper: #fff; --ink: #1c2530; --muted: #4a5460; --rule: #cfcfcf; --accent: #0d5c63; }
+    body { font-size: 9.5pt; line-height: 1.4; }
+    .wrap { max-width: none; padding: 0; }
+    .topbar, .actions { display: none; }
+    .hero { padding: 0 0 .9rem; }
+    h1 { font-size: 28pt; margin-bottom: .5rem; }
+    .tagline { font-size: 10pt; margin: 0 0 .5rem; }
+    .print-contact { display: block; margin: 0; font-size: 9pt; color: var(--muted); }
+    #contact, footer { display: none; }
+    h2 { font-size: 14pt; margin-bottom: .6rem; break-after: avoid; }
+    section { padding: .9rem 0 .6rem; }
+    .when { font-size: 9pt; white-space: nowrap; }
+    .row { grid-template-columns: 38mm 1fr; gap: 0 5mm; break-inside: avoid; margin-bottom: .7rem; }
+    ul.points { margin-top: .2rem; }
+    ul.points li { margin-bottom: .15rem; }
+    .where { margin-bottom: .2rem; }
+    #contact p { margin: 0 0 .4rem; }
+    footer { padding: .8rem 0 0; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top">Divya Gate</a>
+    <nav aria-label="Sections">
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#more">Languages</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+
+  <div class="hero">
+    <p class="kicker">Software Developer · Montréal</p>
+    <h1>Divya Gate</h1>
+    <p class="tagline">
+      Software developer with 9+ years of experience building web applications and user interfaces. I work across the full stack with C#, .NET Core, React and SQL, and I'm now learning machine learning and agentic AI to build AI-powered applications.
+    </p>
+    <p class="print-contact">divyagate1993@gmail.com · 514-943-6701 · linkedin.com/in/divya-gatebba76583 · Montréal, Québec</p>
+    <div class="actions">
+      <button class="btn primary" type="button" onclick="window.print()">Save as PDF</button>
+      <a class="btn secondary" href="https://www.linkedin.com/in/divya-gatebba76583">LinkedIn</a>
+    </div>
+  </div>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <div class="row">
+      <div class="when">Mar 2025 – Present</div>
+      <div>
+        <h3>Software Developer</h3>
+        <p class="where">Pacific Programming &amp; Tech Inc. · Montréal, hybrid</p>
+        <ul class="points">
+          <!-- TODO: add measurable results, e.g. features shipped, performance gains, users reached -->
+          <li>Develop features across the full stack using C#, .NET Core, React, APIs and databases.</li>
+          <li>Implement designers' Figma designs as production interfaces in .NET Core.</li>
+          <li>Use Git daily: branching, pull requests and code review. Use AI coding assistants for development and Git tasks.</li>
+          <li>Release code to production through DevOps pipelines.</li>
+          <li>Take part in sprint planning and Scrum ceremonies with the team.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="when">Aug 2021 – Mar 2025</div>
+      <div>
+        <h3>Front-End Developer</h3>
+        <p class="where">Pacific Programming &amp; Tech Inc. · Montréal, hybrid</p>
+        <ul class="points">
+          <li>Took over a production website with many open issues. Cut bugs by about half and cleared the backlog by fixing defects and releasing small updates frequently.</li>
+          <li>Improved SEO standards and reduced page load time from about 6 seconds to about 3.</li>
+          <li>Built features for an online casino platform with C#, .NET Core, HTML, CSS (SCSS) and JavaScript: deposits, withdrawals and promotions.</li>
+          <li>Developed two-factor authentication to secure user accounts.</li>
+          <li>Redesigned the whole website with a dark mode.</li>
+          <li>Worked in an Agile environment, delivering rapid iterations for international clients.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="when">Mar – Aug 2019</div>
+      <div>
+        <h3>UI Web Developer</h3>
+        <p class="where">INTA Technology · India</p>
+        <ul class="points">
+          <li>Designed and implemented the initial version of a health care web application in C# on the .NET framework.</li>
+          <li>Built responsive front-end features for the web application.</li>
+          <li>Created and updated design mockups, built reusable code, and tested and fixed issues before deployment.</li>
+          <li>Took part in Agile Scrum sprints.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="when">Sep 2016 – Feb 2019</div>
+      <div>
+        <h3>Web Producer / Front-End Developer</h3>
+        <p class="where">Investis Digital · Vadodara, India</p>
+        <ul class="points">
+          <li>Built Sitecore (C# .NET) sites on individual and team projects: sublayouts and templates in HTML5, CSS3, JavaScript and Bootstrap, including multilingual content pop-ups.</li>
+          <li>Optimized pages for speed and scalability and kept brand consistency with W3C-compatible code.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="when">Jul – Sep 2016</div>
+      <div>
+        <h3>UI/UX Designer and Developer</h3>
+        <p class="where">Myrestica Technologies Pvt Ltd · Vadodara, India</p>
+        <ul class="points">
+          <li>Designed and built the Livears social media web application with PHP CodeIgniter.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="when">Aug 2015 – Mar 2016</div>
+      <div>
+        <h3>Program Analyst Trainee</h3>
+        <p class="where">Zootar Software Pvt Ltd. · Vadodara, India</p>
+        <ul class="points">
+          <li>Worked on an educational app using Node.js, Express, HTML5, CSS3, JavaScript, jQuery, AJAX, GitHub and MongoDB, and added new features to the system.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="row"><div class="when label">Front end</div><div>HTML5, CSS, SCSS, Bootstrap, JavaScript, TypeScript, jQuery, React, responsive design, web performance, SEO</div></div>
+    <div class="row"><div class="when label">Back end</div><div>C#, .NET Core, ASP.NET MVC, Entity Framework, REST APIs, JSON, two-factor authentication, payment flows, SQL Server, MySQL</div></div>
+    <div class="row"><div class="when label">CMS and design</div><div>Sitecore, WordPress, Figma, Zeplin, Photoshop</div></div>
+    <div class="row"><div class="when label">Practices</div><div>Git, CI/CD and DevOps, production releases, Agile and Scrum, JIRA, bug fixing, unit testing, code reviews, object-oriented programming, data structures and algorithms</div></div>
+    <div class="row"><div class="when label">Learning</div><div>Machine learning (supervised and unsupervised learning), agentic AI, Python, large language models, retrieval-augmented generation</div></div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="row">
+      <div class="when">2019 – 2021</div>
+      <div>
+        <h3>AEC Diploma, Mobile Application Development</h3>
+        <p class="where">Cégep de la Gaspésie et des Îles · Montréal</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">2011 – 2015</div>
+      <div>
+        <h3>Bachelor of Engineering, Computer Science</h3>
+        <p class="where">Parul Institute of Engineering and Technology</p>
+      </div>
+    </div>
+  </section>
+
+    <section id="more">
+    <h2>Languages</h2>
+    <p style="margin:0">English, French (A2), Hindi, Marathi, Gujarati</p>
+  </section>
+
+  <section id="contact">
+    <h2>Get in touch</h2>
+    <p>I'm open to new job opportunities. Feel free to get in touch.</p>
+    <div class="actions">
+      <a class="btn primary" href="mailto:divyagate1993@gmail.com">divyagate1993@gmail.com</a>
+      <a class="btn secondary" href="https://www.linkedin.com/in/divya-gatebba76583">LinkedIn</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Software developer in Montréal, Québec, Canada.</p>
+    <p>© 2026 Divya Gate</p>
+  </div>
+</footer>
+
+</body>
+</html>
